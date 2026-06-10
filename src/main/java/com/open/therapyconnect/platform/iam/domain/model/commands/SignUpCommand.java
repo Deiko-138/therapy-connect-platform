@@ -13,7 +13,7 @@ import java.util.List;
  * @param password the password of the user
  * @param roles the roles of the user
  *
- * @see com.therapyconnect.platform.iam.domain.model.aggregates.User
+ * @see com.open.therapyconnect.platform.iam.domain.model.aggregates.User
  */
 public record SignUpCommand(String username, String password, List<Role> roles) {
 }

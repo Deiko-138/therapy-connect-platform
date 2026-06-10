@@ -8,7 +8,7 @@ package com.open.therapyconnect.platform.iam.domain.model.commands;
  * @param username the username of the user
  * @param password the password of the user
  *
- * @see com.therapyconnect.platform.iam.domain.model.aggregates.User
+ * @see com.open.therapyconnect.platform.iam.domain.model.aggregates.User
  */
 public record SignInCommand(String username, String password) {
 }
