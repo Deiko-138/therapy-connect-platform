@@ -1,7 +1,7 @@
 package com.open.therapyconnect.platform.shared.interfaces.rest.transform;
 
-import com.therapyconnect.platform.shared.application.result.ApplicationError;
-import com.therapyconnect.platform.shared.application.result.Result;
+import com.open.therapyconnect.platform.shared.application.result.ApplicationError;
+import com.open.therapyconnect.platform.shared.application.result.Result;
 import org.jspecify.annotations.NullMarked;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
