@@ -21,6 +21,6 @@ public class RolePersistenceEntity {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "name", nullable = false, unique = true, length = 20)
+    @Column(name = "name", nullable = false, unique = true, length = 50)
     private Roles name;
 }
