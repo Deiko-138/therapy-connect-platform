@@ -11,8 +11,8 @@
 	<groupId>com.open</groupId>
 	<artifactId>therapy-connect-platform</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
+	<name>TherapyConnect Platform</name>
+	<description>TherapyConnect Platform is a RESTful API built on Domain-Driven Design (DDD). Developed with Java 26, Spring Boot 4, and PostgreSQL, the platform provides a robust solution for managing therapy progress and tracking notes.</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -108,6 +108,12 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
