@@ -34,15 +34,16 @@ public class WeeklySchedule extends AbstractDomainAggregateRoot<WeeklySchedule> 
         this.weekEndDate = command.weekEndDate();
         this.totalSessions = command.totalSessions();
         this.notes = command.notes() != null ? command.notes() : Strings.EMPTY;
-        this.published = false;
+        this.published = command.published() != null && command.published();
     }
 
     public WeeklySchedule updateInformation(String weekStartDate, String weekEndDate,
-                                             Integer totalSessions, String notes) {
+                                             Integer totalSessions, String notes, Boolean published) {
         this.weekStartDate = weekStartDate;
         this.weekEndDate = weekEndDate;
         this.totalSessions = totalSessions;
         this.notes = notes != null ? notes : Strings.EMPTY;
+        if (published != null) this.published = published;
         return this;
     }
 

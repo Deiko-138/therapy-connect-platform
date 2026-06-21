@@ -8,7 +8,8 @@ public record CreateWeeklyScheduleCommand(
         String weekStartDate,
         String weekEndDate,
         Integer totalSessions,
-        String notes
+        String notes,
+        Boolean published
 ) {
     public CreateWeeklyScheduleCommand {
         if (teacherId == null)

@@ -36,7 +36,7 @@ public class WeeklyScheduleCommandServiceImpl implements WeeklyScheduleCommandSe
         try {
             var updated = scheduleRepository.save(
                     result.get().updateInformation(command.weekStartDate(), command.weekEndDate(),
-                            command.totalSessions(), command.notes()));
+                            command.totalSessions(), command.notes(), command.published()));
             return Result.success(updated);
         } catch (Exception e) {
             return Result.failure(ApplicationError.unexpected("update-weekly-schedule", e.getMessage()));

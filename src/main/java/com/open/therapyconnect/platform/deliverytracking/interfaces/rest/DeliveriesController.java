@@ -31,9 +31,11 @@ public class DeliveriesController {
     @GetMapping
     @Operation(summary = "Get deliveries by date and status")
     public ResponseEntity<List<DeliverySummaryResource>> getDeliveriesByDateAndStatus(
-            @RequestParam String date,
+            @RequestParam(name = "deliveryDate", required = false) String deliveryDate,
+            @RequestParam(name = "date", required = false) String date,
             @RequestParam String status) {
-        var resolvedDate = "today".equalsIgnoreCase(date) ? LocalDate.now().toString() : date;
+        var raw = deliveryDate != null ? deliveryDate : (date != null ? date : LocalDate.now().toString());
+        var resolvedDate = "today".equalsIgnoreCase(raw) ? LocalDate.now().toString() : raw;
         var deliveries = queryService.handle(new GetDeliveriesByDateAndStatusQuery(resolvedDate, status));
         var resources = deliveries.stream()
                 .map(DeliverySummaryResourceFromEntityAssembler::toResourceFromEntity)
