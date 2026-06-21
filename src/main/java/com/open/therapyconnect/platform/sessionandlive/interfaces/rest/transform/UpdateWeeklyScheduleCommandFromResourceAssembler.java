@@ -11,7 +11,8 @@ public class UpdateWeeklyScheduleCommandFromResourceAssembler {
                 resource.weekStartDate(),
                 resource.weekEndDate(),
                 resource.totalSessions(),
-                resource.notes()
+                resource.notes(),
+                resource.published()
         );
     }
 }
