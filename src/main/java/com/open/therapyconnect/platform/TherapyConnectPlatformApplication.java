@@ -1,4 +1,4 @@
-package com.open.therapyconnect.platform;
+cp src/main/resources/application-dev.properties.example src/main/resources/application-dev.propertiespackage com.open.therapyconnect.platform;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
